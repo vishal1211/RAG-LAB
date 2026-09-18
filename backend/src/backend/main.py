@@ -1,10 +1,7 @@
 
 from fastapi import APIRouter
 
-router = APIRouter(
-            prefix="/items",
-            tags=["Items"]
-        )
+router = APIRouter()
 
 @router.get("/health")
 async def read_health():
