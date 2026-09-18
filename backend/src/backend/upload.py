@@ -56,6 +56,7 @@ async def upload_file(file: UploadFile = File(...)):
     vector_store.add_documents(documents)
 
     return {
+        "message": "File uploaded successfully.",
         "filename": file.filename,
         "stored": True,
         "duplicate": False,

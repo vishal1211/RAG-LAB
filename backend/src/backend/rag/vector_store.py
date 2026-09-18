@@ -1,7 +1,14 @@
+from pathlib import Path
+
 from langchain_chroma import Chroma
 from langchain_huggingface import HuggingFaceEmbeddings
 
 from ..settings import settings
+
+Path(settings.vector_store_path).mkdir(
+    parents=True,
+    exist_ok=True,
+)
 
 embedding_model = HuggingFaceEmbeddings(
     model_name=settings.embedding_model,

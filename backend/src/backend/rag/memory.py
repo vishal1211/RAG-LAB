@@ -1,8 +1,15 @@
 import sqlite3
+from pathlib import Path
 
 from .memory_summary import summarize_history
+from ..settings import settings
 
-DATABASE_PATH = "conversation_memory.db"
+DATABASE_PATH = settings.memory_db_path
+
+Path(DATABASE_PATH).parent.mkdir(
+    parents=True,
+    exist_ok=True,
+)
 
 
 def initialize_memory():

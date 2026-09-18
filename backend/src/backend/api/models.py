@@ -6,7 +6,7 @@ class UploadResponse(BaseModel):
     stored: bool
     duplicate: bool
     file_hash: str
-    chunks_stored: int | None = (None,)
+    chunks_stored: int | None = None
     message: str
 
 

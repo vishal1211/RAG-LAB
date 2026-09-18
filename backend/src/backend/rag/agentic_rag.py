@@ -32,8 +32,6 @@ def run_agentic_rag(
             correction_attempted=correction_attempted,
         )
         trace.append(action)
-        print("Agent action:", action)
-
         if action == "retrieve":
 
             search_text, results, is_relevant = retrieve_documents(
