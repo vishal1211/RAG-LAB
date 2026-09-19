@@ -219,3 +219,10 @@ __marimo__/
 
 conversation_memory.db
 vector_store
+
+.venv
+__pycache__
+*.pyc
+.env
+data
+.git
