@@ -11,7 +11,7 @@ class Settings(BaseSettings):
     groq_api_key: str
     ollama_api_key: str | None = None
     google_api_key: str | None = None
-    huggingface_api_key: str
+    huggingface_api_key: str | None = None
     memory_history_limit: int = 10
     data_dir: str = "data"
     vector_store_path: str = "data/vector_store"
